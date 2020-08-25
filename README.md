@@ -24,3 +24,13 @@ The installation makes use of 2 Ansible playbooks and a .bash_aliases file:
 | setup_playbook.yml  | The Setup Playbook updates the Kali VM and installs tooling that I find useful. |
 | software_playbook.yml  | The Software Playbook downloads general software that I make use of during pentests and some basic scripts. |
 | bash_aliases  | Creates a few simple bash aliases from scripts that I created which I generally make use of.  |
+
+## Follow Me
+
+<img height="32" width="32" src="https://github.com/StackExchange/Stacks-Icons/blob/production/src/Icon/GitHub.svg" /> [Github: KyhleOhlinger](https://github.com/KyhleOhlinger)
+
+<img height="32" width="32" src="https://github.com/StackExchange/Stacks-Icons/blob/production/src/Icon/LinkedIn.svg" /> [LinkedIn: Kyhle Ohlinger](https://za.linkedin.com/in/kyhleohlinger)
+
+<img height="32" width="32" src="https://github.com/StackExchange/Stacks-Icons/blob/production/src/Icon/LogoGlyphMd.svg" /> [StackOverflow: Kyhle Ohlinger](https://stackoverflow.com/users/5114477/kyhle-ohlinger)
+
+<img height="32" width="32" src="https://github.com/StackExchange/Stacks-Icons/blob/production/src/Icon/Twitter.svg" /> [Twitter: KyhleO](https://twitter.com/KyhleO)
