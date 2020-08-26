@@ -15,6 +15,11 @@ Once you have the required items installed, you can simply run the following ter
 vagrant up
 ```
 
+The default credentials are:
+| Username  | Password  |
+|---|---|
+| vagrant  | vagrant |
+
 ## Additional Files
 
 The installation makes use of 2 Ansible playbooks and a .bash_aliases file:
@@ -24,6 +29,13 @@ The installation makes use of 2 Ansible playbooks and a .bash_aliases file:
 | setup_playbook.yml  | The Setup Playbook updates the Kali VM and installs tooling that I find useful. |
 | software_playbook.yml  | The Software Playbook downloads general software that I make use of during pentests and some basic scripts. |
 | bash_aliases  | Creates a few simple bash aliases from scripts that I created which I generally make use of.  |
+
+## Running Covenant
+I added in the [Covenant](https://github.com/cobbr/Covenant) package. Please go to the link for details on how to use it.
+```bat
+cd /opt/Covenant/Covenant && dotnet run
+```
+
 
 ## Follow Me
 
