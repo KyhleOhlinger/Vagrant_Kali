@@ -12,6 +12,7 @@ In order to run the Vagrant file, you need the following:
 * [Vagrant](https://www.vagrantup.com/)
 * [VirtualBox](https://www.virtualbox.org/)
 * [Guest Addition Plugin for Vagrant](https://www.serverlab.ca/tutorials/virtualization/how-to-auto-upgrade-virtualbox-guest-additions-with-vagrant/)
+* [Ansible](https://www.ansible.com/)
 
 Once you have the required items installed, you can simply run the following terminal command:
 
