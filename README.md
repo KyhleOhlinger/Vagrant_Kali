@@ -20,7 +20,7 @@ Once you have the required items installed, you can simply run the following ter
 vagrant up
 ```
 
-I have tested this on both Linux (Fedora 32) and Windows (Windows 10) machines - With Windows 10, this [guide](https://geekflare.com/ansible-installation-windows/) describes how to install Ansible using Windows Subsystem for Linux. If you run into any issues, please let me know!
+I have tested this on both Linux (Fedora 32) and Windows (Windows 10) machines - With Windows 10, this [guide](https://geekflare.com/ansible-installation-windows/) describes how to install Ansible using either Cygwin or Windows Subsystem for Linux. If you run into any issues, please let me know!
 
 ## Configuration Files
 
