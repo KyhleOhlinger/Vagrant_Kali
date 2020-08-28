@@ -19,6 +19,8 @@ Once you have the required items installed, you can simply run the following ter
 vagrant up
 ```
 
+I have tested this on both Linux (Fedora 32) and Windows (Windows 10) machines. If you run into any issues, please let me know!
+
 ## Configuration Files
 
 The installation makes use of 2 Ansible playbooks and 2 condifguration file:
