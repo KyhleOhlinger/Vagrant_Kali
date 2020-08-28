@@ -1,0 +1,41 @@
+Vagrant.configure("2") do |config|
+    # ======================== KALI Settings ==========================
+    config.vm.define "ko" do |ko|
+        ko.vm.box = "kalilinux/rolling"  
+
+        # Set size and memory for the VM
+        ko.vm.provider :virtualbox do |v, override|
+            v.name = "KO-Kali"
+            v.gui = true
+            v.cpus = 4
+            v.memory = 6144
+            v.customize ["modifyvm", :id, "--vram", 16]
+
+            v.customize [ "guestproperty", "set", :id, "/VirtualBox/GuestAdd/VBoxService/--timesync-set-threshold", 1000 ]
+            v.customize [ "guestproperty", "set", :id, "/VirtualBox/GuestAdd/VBoxService/--timesync-interval", 10000 ]
+            v.customize [ "guestproperty", "set", :id, "/VirtualBox/GuestAdd/VBoxService/--timesync-min-adjust", 100 ]
+        end
+
+        vagrant_root = File.dirname(__FILE__)
+        ko.vm.provision "file", source: vagrant_root+"/bash_aliases", destination: "~/.bash_aliases"   
+        
+        # ======================== KALI Provisioning ==========================
+        ko.vm.provision  "setup_playbook", type:'ansible' do |ansible|
+            ansible.verbose = "vvv"
+            ansible.playbook = "setup_playbook.yml"
+            ansible.extra_vars = { ansible_python_interpreter:"/usr/bin/python3" }
+            ansible.become = true
+        end 
+
+        ko.vm.provision "shell", reboot: true
+
+        # ======================== SOFTWARE Provisioning ==========================
+        ko.vm.provision  "software_playbook", type:'ansible' do |ansible|
+            ansible.verbose = "vvv"
+            ansible.playbook = "software_playbook.yml"
+            ansible.extra_vars = { ansible_python_interpreter:"/usr/bin/python3" }
+            ansible.become = true
+        end 
+        ko.vm.provision "file", source: vagrant_root+"/tmux_config", destination: "~/.tmux.conf" 
+    end
+end

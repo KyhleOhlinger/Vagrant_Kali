@@ -1,0 +1,39 @@
+- hosts: all
+  become: true
+  become_user: root
+  become_method: sudo
+  tasks:   
+    - name: Update and Upgrade hosts
+      apt:
+        upgrade: yes
+        update_cache: yes
+
+    - name: Correct Python version selected
+      alternatives:
+        name: python
+        path: /usr/bin/python
+        link: /usr/bin/python3.8
+
+    - name: Create symbolic link 
+      file:
+        src: "/usr/bin/python3"
+        dest: "/usr/bin/python"
+        state: link
+          
+    - name: Install packages for VSCode
+      apt:
+        name: ['curl','gpg','software-properties-common','apt-transport-https']
+
+    - name: Add VSCode Apt signing key
+      apt_key:
+        url: https://packages.microsoft.com/keys/microsoft.asc 
+        state: present
+
+    - name: Add in VSCode Repository
+      apt_repository:
+        repo: deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main
+        state: present 
+
+    - name: Install packages for Pentesting Environment
+      apt:
+        name: ['code','tmux','python3-pip','seclists','neo4j','bloodhound','remmina']
