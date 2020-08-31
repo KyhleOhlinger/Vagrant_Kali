@@ -36,4 +36,4 @@
 
     - name: Install packages for Pentesting Environment
       apt:
-        name: ['code','tmux','python3-pip','seclists','neo4j','bloodhound','remmina']
+        name: ['code','tmux','python3-pip','seclists','neo4j','bloodhound','remmina','golang']
