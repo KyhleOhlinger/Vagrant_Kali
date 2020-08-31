@@ -22,7 +22,7 @@ vagrant up
 
 ## Configuration Files
 
-The installation makes use of 2 Ansible playbooks and 2 condifguration file:
+The installation makes use of 2 Ansible playbooks and 2 configuration files:
 
 | File  | Description  |
 |---|---|
