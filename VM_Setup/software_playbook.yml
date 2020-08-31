@@ -36,6 +36,7 @@
       - https://raw.githubusercontent.com/KyhleOhlinger/PentestScripts/master/Bash%20Scripts/network.sh
       - https://raw.githubusercontent.com/KyhleOhlinger/PentestScripts/master/Bash%20Scripts/zone.sh
       - https://raw.githubusercontent.com/KyhleOhlinger/PentestScripts/master/Bash%20Scripts/ldap.sh  
+      - https://raw.githubusercontent.com/KyhleOhlinger/PentestScripts/master/Bash%20Scripts/tty_shell.sh
 
     - name: Download required software
       get_url:
