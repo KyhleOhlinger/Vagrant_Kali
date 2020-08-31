@@ -42,6 +42,7 @@ The following software has been installed with the base image:
 | [Neo4j](https://neo4j.com/) | Neo4j is a native graph database which leverages not only data but also data relationships. Neo4j connects data as it’s stored. |
 | [BloodHound](https://github.com/BloodHoundAD/BloodHound) | BloodHound uses graph theory to reveal the hidden and often unintended relationships within an Active Directory environment.  | 
 | [Remmina](https://remmina.org/) | Remmina is a remote desktop client for POSIX-based computer operating systems. It supports the Remote Desktop Protocol, VNC, NX, XDMCP, SPICE and SSH protocol. | 
+| [RustScan](https://github.com/RustScan/RustScan) | Wrapper to increase the speed of Nmap scans.|
 
 ### Cloned Repositories
 The following repositories are cloned into the `/opt` directory:
@@ -69,6 +70,7 @@ The `.bash_aliases` file includes the following scripts that I created. The file
 | [ion](https://github.com/KyhleOhlinger/PentestScripts/blob/master/Bash%20Scripts/network.sh) | Simple Networking script to reset network driver and ping Google's primary DNS server.| 
 | [zone](https://github.com/KyhleOhlinger/PentestScripts/blob/master/Bash%20Scripts/zone.sh) | Simple Zone Transfer Bash Script. |
 | [ldap-query](https://github.com/KyhleOhlinger/PentestScripts/blob/master/Bash%20Scripts/ldap.sh) | LDAP bash script for domain enumeration. |
+| [shell](https://github.com/KyhleOhlinger/PentestScripts/blob/master/Bash%20Scripts/tty_shell.sh) | Basic commands to upgrade to TTY Shell. |
 
 ## Future Work
 * Create a Base Windows VM build with similar functionality.
