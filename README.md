@@ -14,10 +14,21 @@ In order to run the Vagrant file, you need the following:
 * [Guest Addition Plugin for Vagrant](https://www.serverlab.ca/tutorials/virtualization/how-to-auto-upgrade-virtualbox-guest-additions-with-vagrant/)
 * [Ansible](https://www.ansible.com/)
 
-Once you have the required items installed, you can simply run the following terminal command:
+### Running with Ansible on host
+
+Once you have the required items installed, you can download the `VM_Setup` configuration and simply run the following terminal command:
 
 ```bat
 vagrant up
+```
+
+### Running without Ansible on host 
+
+If you are running it from Windows or if you would prefer to have the Ansible scripts run from the Kali machine itself, I have included `VM_Setup_Contained` to do that for you. The main difference is that Vagrant will place the playbooks onto the Kali Vagrant Desktop and run them from there after installing Ansible on the Kali machine. Within the Ansible playbooks, the first 2 lines also changed - It replaces the `hosts: all` with the following:
+
+```yaml
+- hosts: localhost
+  connection: local
 ```
 
 ## Configuration Files
