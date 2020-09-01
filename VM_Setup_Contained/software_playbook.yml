@@ -1,0 +1,99 @@
+- hosts: localhost
+  connection: local
+  become: true
+  become_user: root
+  become_method: sudo
+  tasks: 
+    - name: Adding in Git Repo's to /opt
+      git: 
+        repo={{ item.repo }} recursive=yes
+        dest=/opt/{{ item.name }}
+      with_items:
+      - { repo: 'https://github.com/tmux-plugins/tmux-logging', name: 'TmuxLogging'}
+      - { repo: 'https://github.com/411Hall/JAWS.git', name: 'JAWS'}
+      - { repo: 'https://github.com/rebootuser/LinEnum.git', name: 'LinEnum'}
+      - { repo: 'https://github.com/vletoux/pingcastle.git', name: 'PingCastle'}
+      - { repo: 'https://github.com/GhostPack/Rubeus.git', name: 'Rubeus'}
+      - { repo: 'https://github.com/Sab0tag3d/SIET.git', name: 'SIET'}
+      - { repo: 'https://github.com/fox-it/mitm6.git', name: 'Mitm6'}
+      - { repo: 'https://github.com/bitsadmin/wesng.git', name: 'WindowsExploitSuggester'}
+      - { repo: 'https://github.com/cobbr/Covenant.git', name: 'Covenant'}
+      - { repo: 'https://github.com/PowerShellMafia/PowerSploit.git', name: 'PowerSploit'}
+
+    - name: Create directory structure
+      file:
+        path: /opt/{{ item }}
+        state: directory
+      with_items:
+      - SysInternals
+      - Postman
+      - Aliases
+
+    - name: Download Github scripts
+      get_url: 
+        url={{ item }}
+        dest=/opt/Aliases/ mode=a+x
+      with_items:
+      - https://raw.githubusercontent.com/KyhleOhlinger/PentestScripts/master/Bash%20Scripts/network.sh
+      - https://raw.githubusercontent.com/KyhleOhlinger/PentestScripts/master/Bash%20Scripts/zone.sh
+      - https://raw.githubusercontent.com/KyhleOhlinger/PentestScripts/master/Bash%20Scripts/ldap.sh  
+      - https://raw.githubusercontent.com/KyhleOhlinger/PentestScripts/master/Bash%20Scripts/tty_shell.sh
+
+    - name: Download required software
+      get_url:
+        url: "{{ item.repo }}"
+        dest: /opt/{{ item.name }}
+      with_items:
+      - { repo: 'https://download.sysinternals.com/files/SysinternalsSuite.zip', name: 'SysInternals'}
+      - { repo: 'https://dl.pstmn.io/download/latest/linux64', name: 'Postman.tar.gz'}
+      - { repo: 'https://github.com/RustScan/RustScan/releases/download/1.8.0/rustscan_1.8.0_amd64.deb', name: 'rustscan.deb'}
+
+    - name: Install rustscan .deb package
+      apt:
+        deb: /opt/rustscan.deb
+
+    - name: Extract Software
+      unarchive:
+        src: "{{ item.src }}"
+        dest: /opt/{{ item.dest }}
+        remote_src: yes
+      with_items:
+      - { src: "/opt/Postman.tar.gz", dest: "Postman"}
+      - { src: "/opt/SysInternals/SysinternalsSuite.zip", dest: "SysInternals"}
+
+    - name: Remove files (delete files)
+      file:
+        path: "{{ item }}"
+        state: absent
+      with_items:
+      - /opt/SysInternals/SysinternalsSuite.zip
+      - /opt/Postman.tar.gz
+      - /opt/rustscan.deb
+
+    - name: Download Microsoft packages for Covenant
+      get_url:
+        url: https://packages.microsoft.com/config/ubuntu/20.04/prod.list
+        dest: /etc/apt/sources.list.d/microsoft-prod.list
+
+    - name: Install packages for dotnet
+      apt:
+        name: apt-transport-https
+    
+    - name: Update and Upgrade hosts
+      apt:
+        upgrade: yes
+        update_cache: yes
+
+    - name: Install packages for dotnet
+      apt:
+        name: dotnet-sdk-3.1
+
+    - name: Go to Covenant and Build it
+      command: bash -c "cd /opt/Covenant/Covenant && dotnet build"
+
+    - name: Change folder ownership, group and permissions
+      file:
+        path: /opt/
+        owner: vagrant
+        group: vagrant
+        recurse: yes

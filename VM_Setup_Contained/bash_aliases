@@ -1,0 +1,4 @@
+alias ion='/opt/Aliases/network.sh'
+alias zone='/opt/Aliases/zone.sh'
+alias ldap-query='/opt/Aliases/ldap.sh'
+alias shell='/opt/Aliases/tty_shell.sh'
