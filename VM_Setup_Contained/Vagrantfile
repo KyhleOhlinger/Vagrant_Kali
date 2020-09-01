@@ -35,7 +35,7 @@ Vagrant.configure("2") do |config|
         # ======================== SOFTWARE Provisioning ==========================
         $script = <<-SCRIPT
         echo SOFTWARE Provisioning...
-        ansible-playbook /home/vagrant/Desktop/VM_Setup/software_playbook.yml -e 'ansible_python_interpreter=/usr/bin/python3'
+        ansible-playbook /home/vagrant/Desktop/VM_Setup/software_playbook.yml -e 'ansible_python_interpreter=/usr/bin/python3' -vvv
 
         SCRIPT
 
