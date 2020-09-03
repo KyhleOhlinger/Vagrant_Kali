@@ -19,6 +19,7 @@
       - { repo: 'https://github.com/bitsadmin/wesng.git', name: 'WindowsExploitSuggester'}
       - { repo: 'https://github.com/cobbr/Covenant.git', name: 'Covenant'}
       - { repo: 'https://github.com/PowerShellMafia/PowerSploit.git', name: 'PowerSploit'}
+      - { repo: 'https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite.git', name: 'PrivEsc'}
 
     - name: Create directory structure
       file:
