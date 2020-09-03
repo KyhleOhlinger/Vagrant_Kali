@@ -71,6 +71,7 @@ The following repositories are cloned into the `/opt` directory:
 | [Covenant](https://github.com/cobbr/Covenant) | Please go to the link for details on how to use it. To run the application, you can use the following: `cd /opt/Covenant/Covenant && dotnet run` | 
 | [PowerSploit](https://github.com/PowerShellMafia/PowerSploit) | PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. |
 | [Postman](https://www.postman.com/) | Postman is a collaboration platform for API development which can be used during penetration assessments while focusing on APIs. | 
+| [PrivEsc](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite) | Includes LinPeas and WinPeas privilege escalation tools for Windows and Linux/Unix*. |
 
 ### Bash Aliases
 
