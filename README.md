@@ -85,6 +85,8 @@ The `.bash_aliases` file includes the following scripts that I created. The file
 | [shell](https://github.com/KyhleOhlinger/PentestScripts/blob/master/Bash%20Scripts/tty_shell.sh) | Basic commands to upgrade to TTY Shell. |
 
 ## Future Work
+* Create empty optical drive to install Guest Additions
+* Add vagrant user to vboxsf group `sudo usermod -G vboxsf -a vagrant` - grants access to shared folders
 * Create a Base Windows VM build with similar functionality.
 * Port functionality to a Parrot OS version.
 
