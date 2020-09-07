@@ -1,7 +1,8 @@
 Vagrant.configure("2") do |config|
     # ======================== KALI Settings ==========================
     config.vm.define "ko" do |ko|
-        ko.vm.box = "kalilinux/rolling"  
+        ko.vm.box = "kalilinux/rolling" 
+        ko.vm.hostname = "ko"
 
         # Set size and memory for the VM
         ko.vm.provider :virtualbox do |v, override|
@@ -10,6 +11,9 @@ Vagrant.configure("2") do |config|
             v.cpus = 4
             v.memory = 6144
             v.customize ["modifyvm", :id, "--vram", 16]
+            
+            # Add in optical drive
+            v.customize ["storageattach", :id, "--storagectl", "IDE Controller", "--port", "0", "--device", "1", "--type", "dvddrive", "--medium", "emptydrive"]
 
             v.customize [ "guestproperty", "set", :id, "/VirtualBox/GuestAdd/VBoxService/--timesync-set-threshold", 1000 ]
             v.customize [ "guestproperty", "set", :id, "/VirtualBox/GuestAdd/VBoxService/--timesync-interval", 10000 ]
@@ -17,6 +21,7 @@ Vagrant.configure("2") do |config|
         end
 
         vagrant_root = File.dirname(__FILE__)
+        ko.vm.provision "shell", inline: "sudo usermod -G vboxsf -a vagrant"
         ko.vm.provision "file", source: vagrant_root+"/bash_aliases", destination: "~/.bash_aliases"   
         
         # ======================== KALI Provisioning ==========================
