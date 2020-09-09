@@ -54,6 +54,8 @@ The following software has been installed with the base image:
 | [BloodHound](https://github.com/BloodHoundAD/BloodHound) | BloodHound uses graph theory to reveal the hidden and often unintended relationships within an Active Directory environment.  | 
 | [Remmina](https://remmina.org/) | Remmina is a remote desktop client for POSIX-based computer operating systems. It supports the Remote Desktop Protocol, VNC, NX, XDMCP, SPICE and SSH protocol. | 
 | [RustScan](https://github.com/RustScan/RustScan) | Wrapper to increase the speed of Nmap scans.|
+| [Golang](https://golang.org/) | Go is an open source programming language which is useful when creating offensive payloads. |
+| [Gobuster](https://tools.kali.org/web-applications/gobuster)| Gobuster is a directory/file and DNS busting tool written in Go. |
 
 ### Cloned Repositories
 The following repositories are cloned into the `/opt` directory:
