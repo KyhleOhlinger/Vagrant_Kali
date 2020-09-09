@@ -53,7 +53,6 @@ The following software has been installed with the base image:
 | [Neo4j](https://neo4j.com/) | Neo4j is a native graph database which leverages not only data but also data relationships. Neo4j connects data as it’s stored. |
 | [BloodHound](https://github.com/BloodHoundAD/BloodHound) | BloodHound uses graph theory to reveal the hidden and often unintended relationships within an Active Directory environment.  | 
 | [Remmina](https://remmina.org/) | Remmina is a remote desktop client for POSIX-based computer operating systems. It supports the Remote Desktop Protocol, VNC, NX, XDMCP, SPICE and SSH protocol. | 
-| [RustScan](https://github.com/RustScan/RustScan) | Wrapper to increase the speed of Nmap scans.|
 | [Golang](https://golang.org/) | Go is an open source programming language which is useful when creating offensive payloads. |
 | [Gobuster](https://tools.kali.org/web-applications/gobuster)| Gobuster is a directory/file and DNS busting tool written in Go. |
 
@@ -74,6 +73,7 @@ The following repositories are cloned into the `/opt` directory:
 | [PowerSploit](https://github.com/PowerShellMafia/PowerSploit) | PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. |
 | [Postman](https://www.postman.com/) | Postman is a collaboration platform for API development which can be used during penetration assessments while focusing on APIs. | 
 | [PrivEsc](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite) | Includes LinPeas and WinPeas privilege escalation tools for Windows and Linux/Unix*. |
+| [RustScan](https://github.com/RustScan/RustScan) | Wrapper to increase the speed of Nmap scans.|
 
 ### Bash Aliases
 
