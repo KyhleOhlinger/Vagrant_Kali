@@ -91,6 +91,7 @@ The `.bash_aliases` file includes the following scripts that I created. The file
 * Added vagrant user to vboxsf group `sudo usermod -G vboxsf -a vagrant` - grants access to shared folders
 
 ## Future Work
+* Add in VMWare as a provider option
 * Create a Base Windows VM build with similar functionality.
 * Port functionality to a Parrot OS version.
 
