@@ -98,3 +98,10 @@
         owner: vagrant
         group: vagrant
         recurse: yes
+        
+    - name: Install pipx
+      pip:
+        name: pipx
+
+    - name: Install Ensurepath and Crackmapexec
+      shell: "(pipx ensurepath & pipx install crackmapexec)"
