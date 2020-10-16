@@ -55,7 +55,7 @@ The following software has been installed with the base image:
 | [Remmina](https://remmina.org/) | Remmina is a remote desktop client for POSIX-based computer operating systems. It supports the Remote Desktop Protocol, VNC, NX, XDMCP, SPICE and SSH protocol. | 
 | [Golang](https://golang.org/) | Go is an open source programming language which is useful when creating offensive payloads. |
 | [Gobuster](https://tools.kali.org/web-applications/gobuster) | Gobuster is a directory/file and DNS busting tool written in Go. |
-[ [CrackMapExec](https://github.com/byt3bl33d3r/CrackMapExec) | CrackMapExec (a.k.a CME) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks. |
+| [CrackMapExec](https://github.com/byt3bl33d3r/CrackMapExec) | CrackMapExec (a.k.a CME) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks. |
 
 ### Cloned Repositories
 The following repositories are cloned into the `/opt` directory:
