@@ -49,12 +49,13 @@ The following software has been installed with the base image:
 |---|---|
 | [Visual Studio Code](https://code.visualstudio.com/) |  Visual Studio Code is a free source-code editor.  | 
 | [Tmux](https://github.com/tmux/tmux/wiki) | Tmux is a terminal multiplexer that lets you switch easily between several programs in one terminal, detach them (they keep running in the background) and reattach them to a different terminal. |
-| [SecLists](https://tools.kali.org/password-attacks/seclists)|  SecLists is a collection of multiple types of lists used during security assessments. |
+| [SecLists](https://tools.kali.org/password-attacks/seclists) |  SecLists is a collection of multiple types of lists used during security assessments. |
 | [Neo4j](https://neo4j.com/) | Neo4j is a native graph database which leverages not only data but also data relationships. Neo4j connects data as it’s stored. |
 | [BloodHound](https://github.com/BloodHoundAD/BloodHound) | BloodHound uses graph theory to reveal the hidden and often unintended relationships within an Active Directory environment.  | 
 | [Remmina](https://remmina.org/) | Remmina is a remote desktop client for POSIX-based computer operating systems. It supports the Remote Desktop Protocol, VNC, NX, XDMCP, SPICE and SSH protocol. | 
 | [Golang](https://golang.org/) | Go is an open source programming language which is useful when creating offensive payloads. |
-| [Gobuster](https://tools.kali.org/web-applications/gobuster)| Gobuster is a directory/file and DNS busting tool written in Go. |
+| [Gobuster](https://tools.kali.org/web-applications/gobuster) | Gobuster is a directory/file and DNS busting tool written in Go. |
+[ [CrackMapExec](https://github.com/byt3bl33d3r/CrackMapExec) | CrackMapExec (a.k.a CME) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks. |
 
 ### Cloned Repositories
 The following repositories are cloned into the `/opt` directory:
@@ -89,6 +90,7 @@ The `.bash_aliases` file includes the following scripts that I created. The file
 ## Recent Additions
 * Created empty optical drive to install Guest Additions
 * Added vagrant user to vboxsf group `sudo usermod -G vboxsf -a vagrant` - grants access to shared folders
+* Added in CrackMapExec
 
 ## Future Work
 * Add in VMWare as a provider option
