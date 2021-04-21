@@ -1,6 +1,6 @@
 # Vagrant_Kali
 
-This is my set up for a base Kali Linux Pentesting VM - Automated using Vagrant and Ansible. It Uses the official [Hashicorp Vagrant Box](https://app.vagrantup.com/kalilinux/boxes/rolling) and currently only runs on VirtualBox. The default credentials for vagrant machines are shown below:
+This is my set up for a base Kali Linux Pentesting VM - Automated using Vagrant and Ansible. It uses the official [Hashicorp Vagrant Box](https://app.vagrantup.com/kalilinux/boxes/rolling) and currently only runs on VirtualBox. The default credentials for vagrant machines are shown below:
 
 | Username  | Password  |
 |---|---|
