@@ -86,16 +86,13 @@ The `.bash_aliases` file includes the following scripts that I created. The file
 | [zone](https://github.com/KyhleOhlinger/PentestScripts/blob/master/Bash%20Scripts/zone.sh) | Simple Zone Transfer Bash Script. |
 | [ldap-query](https://github.com/KyhleOhlinger/PentestScripts/blob/master/Bash%20Scripts/ldap.sh) | LDAP bash script for domain enumeration. |
 | [shell](https://github.com/KyhleOhlinger/PentestScripts/blob/master/Bash%20Scripts/tty_shell.sh) | Basic commands to upgrade to TTY Shell. |
+| [mount_shares](https://raw.githubusercontent.com/KyhleOhlinger/PentestScripts/master/Bash%20Scripts/vmware_shared_folders.sh) | Mounts VMWare shared folders on Kali. |
 
 ## Recent Additions
 * Created empty optical drive to install Guest Additions
 * Added vagrant user to vboxsf group `sudo usermod -G vboxsf -a vagrant` - grants access to shared folders
 * Added in CrackMapExec
-
-## Future Work
-* Add in VMWare as a provider option
-* Create a Base Windows VM build with similar functionality.
-* Port functionality to a Parrot OS version.
+* Added in Flameshot and mounting shared folders
 
 ## Follow Me
 
